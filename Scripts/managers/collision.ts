@@ -42,8 +42,18 @@ module managers {
               managers.Game.plane.planeFlash.alpha = 1;
               managers.Game.plane.planeFlash.gotoAndPlay("planeflash");
               }
-
               break;
+            case "enemy":
+            createjs.Sound.play("explosion");
+            let explosion = new objects.Explosion();
+            explosion.x = object1.x;
+            explosion.y = object1.y;
+            managers.Game.currentSceneObject.addChild(explosion);
+            managers.Game.scoreBoard.Score += 200;
+
+            // reset enemy
+
+            break;
           }
         }
       }
