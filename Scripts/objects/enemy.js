@@ -36,6 +36,7 @@ var objects;
         Enemy.prototype.Reset = function () {
             this.x = Math.floor((Math.random() * (640 - this.width)) + this.halfWidth);
             this.y = -480;
+            this.alpha = 0;
         };
         // move the object to some new location
         Enemy.prototype.Move = function () {
@@ -43,6 +44,10 @@ var objects;
         };
         // check to see if some boundary has been passed
         Enemy.prototype.CheckBounds = function () {
+            // turn enemy back on when it appears on the screen
+            if ((this.y >= 0) && (this.alpha == 0)) {
+                this.alpha = 1;
+            }
             // check lower bounds
             if (this.y >= 480 + this.height) {
                 this.Reset();
