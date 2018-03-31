@@ -43,11 +43,11 @@ var managers;
                         case "enemy":
                             createjs.Sound.play("explosion");
                             var explosion = new objects.Explosion();
-                            explosion.x = object1.x;
-                            explosion.y = object1.y;
+                            explosion.x = object2.x;
+                            explosion.y = object2.y;
                             managers.Game.currentSceneObject.addChild(explosion);
                             managers.Game.scoreBoard.Score += 200;
-                            // reset enemy
+                            object2.Reset();
                             break;
                     }
                 }
