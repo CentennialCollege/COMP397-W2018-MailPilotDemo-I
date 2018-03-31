@@ -13,6 +13,7 @@
     var keyboardManager;
     var textureAtlasData;
     var textureAtlas;
+    var stats;
     textureAtlasData = {
         "images": [
             ""
@@ -102,8 +103,15 @@
         assetManager.loadManifest(assetManifest);
         assetManager.on("complete", Start, this);
     }
+    function InitStats() {
+        stats = new Stats();
+        stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
+        document.body.appendChild(stats.dom);
+    }
     function Start() {
         console.log("Starting Application...");
+        // initialize performance counting
+        InitStats();
         textureAtlasData.images = [assetManager.getResult("textureAtlas")];
         textureAtlas = new createjs.SpriteSheet(textureAtlasData);
         stage = new createjs.Stage(canvas);
@@ -120,6 +128,7 @@
         Main();
     }
     function Update() {
+        stats.begin();
         // if the scene that is playing returns another current scene
         // then call Main again and switch the scene
         if (currentState != managers.Game.currentScene) {
@@ -127,6 +136,7 @@
         }
         currentScene.Update();
         stage.update(); // redraws the stage
+        stats.end();
     }
     function Main() {
         stage.removeAllChildren();
