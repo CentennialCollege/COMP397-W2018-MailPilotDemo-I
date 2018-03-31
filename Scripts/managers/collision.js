@@ -31,7 +31,7 @@ var managers;
                             if (object1.alpha != 0) {
                                 createjs.Sound.play("explosion");
                                 managers.Game.scoreBoard.Lives -= 1;
-                                var explosion = new objects.Explosion();
+                                var explosion = new objects.Explosion("explosion");
                                 explosion.x = object1.x;
                                 explosion.y = object1.y;
                                 managers.Game.currentSceneObject.addChild(explosion);
@@ -43,7 +43,7 @@ var managers;
                         case "enemy":
                             if (object2.alpha != 0) {
                                 createjs.Sound.play("explosion");
-                                var explosion = new objects.Explosion();
+                                var explosion = new objects.Explosion("explosion");
                                 explosion.x = object2.x;
                                 explosion.y = object2.y;
                                 managers.Game.currentSceneObject.addChild(explosion);
