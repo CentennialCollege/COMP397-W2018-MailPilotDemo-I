@@ -47,29 +47,39 @@
 "animations": {
     "bullet": { "frames": [0] },
     "cloud": { "frames": [1] },
-    "coin": {
-      "frames": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      "speed": 0.33
-    },
-    "enemy": {
-      "frames": [12, 13, 14],
-      "speed": 0.25
-    },
-    "explosion": {
-      "frames": [15, 16, 17, 18, 19, 20, 21],
-      "speed": 0.16
-    },
+    "coin01": { "frames": [2] },
+    "coin02": { "frames": [3] },
+    "coin03": { "frames": [4] },
+    "coin04": { "frames": [5] },
+    "coin05": { "frames": [6] },
+    "coin06": { "frames": [7] },
+    "coin07": { "frames": [8] },
+    "coin08": { "frames": [9] },
+    "coin09": { "frames": [10] },
+    "coin10": { "frames": [11] },
+    "enemy1": { "frames": [12] },
+    "enemy2": { "frames": [13] },
+    "enemy3": { "frames": [14] },
+    "explosion1": { "frames": [15] },
+    "explosion2": { "frames": [16] },
+    "explosion3": { "frames": [17] },
+    "explosion4": { "frames": [18] },
+    "explosion5": { "frames": [19] },
+    "explosion6": { "frames": [20] },
+    "explosion7": { "frames": [21] },
     "island": { "frames": [22] },
-    "plane": { "frames": [23, 24, 25] },
-    "planeflash": {
-      "frames": [26, 27, 26, 27, 26, 27],
-      "speed": 0.08
-    },
+    "plane1": { "frames": [23] },
+    "plane2": { "frames": [24] },
+    "plane3": { "frames": [25] },
+    "planeflash1": { "frames": [26] },
+    "planeflash2": { "frames": [27] },
     "restartButton": { "frames": [28] },
-    "smallexplosion": {
-      "frames": [29, 30, 31, 32, 33, 34],
-      "speed": 0.16
-    },
+    "smallexplosion1": { "frames": [29] },
+    "smallexplosion2": { "frames": [30] },
+    "smallexplosion3": { "frames": [31] },
+    "smallexplosion4": { "frames": [32] },
+    "smallexplosion5": { "frames": [33] },
+    "smallexplosion6": { "frames": [34] },
     "startButton": { "frames": [35] }
 },
 
